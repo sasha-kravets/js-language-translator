@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --body-background: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
+  --mobile-body-background: #ffffff;
+  --translator-background: #ffffff;
+  --decorative-color-light: #bbbbbb;
+  --icons-color: #9f9f9f;
+  --download-button-color: #11103e;
+  --button-text-color: #ffffff
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--mobile-body-background);
+}
+
+@media (min-width: 690px) {
+  body {
+    background: var(--body-background);
+  }
+}
+
+.translator {
+  width: 690px;
+  background: var(--translator-background);
+  border-radius: 7px;
+  padding: 30px;
+}
+
+.translator__container {
+  border-radius: 5px;
+  border: 1px solid var(--decorative-color-light);
+}
+
+.translator__text-input-container {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--decorative-color-light);
+}
+
+@media (min-width: 690px) {
+  .translator__text-input-container {
+    flex-direction: row;
+  }
+}
+
+.translator__text-input {
+  height: 170px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px 15px;
+}
+
+@media (min-width: 590px) {
+  .translator__text-input {
+    height: 250px;
+  }
+}
+
+.translator__text-input_translated {
+  border-radius: 0;
+  border-top: 1px solid var(--decorative-color-light);
+}
+
+@media (min-width: 690px) {
+  .translator__text-input_translated {
+    border-left: 1px solid var(--decorative-color-light);
+    border-top: unset;
+  }
+}
+
+.translator__controls-container,
+.translator__controls,
+.translator__button,
+.translator__button i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.translator__controls-container {
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 590px) {
+  .translator__controls-container {
+    flex-direction: row;
+  }
+}
+
+.translator__controls-container {
+  padding: 12px 15px;
+}
+
+.translator__buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.translator__button {
+  border: none;
+  outline: none;
+  background: none;
+  width: 38%;
+}
+
+.translator__button i {
+  width: 50px;
+  color: var(--icons-color);
+  font-size: 14px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.translator__countries-select {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 18px;
+}
+
+.translator__exchange-btn {
+  border: none;
+  outline: none;
+  background: none;
+  color: var(--icons-color);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.translator__translate-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background: var(--download-button-color);
+  font-size: 17px;
+  color: var(--button-text-color)
+}

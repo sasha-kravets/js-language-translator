@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="./app.js" defer></script>
+  <title>JS | API | Language Translator</title>
+</head>
+
+<body>
+  <div class="translator">
+    <div class="translator__container">
+      <div class="translator__text-input-container">
+        <textarea class="translator__text-input translator__text-input_original" placeholder="Enter text"></textarea>
+        <textarea class="translator__text-input translator__text-input_translated" placeholder="Translation" readonly disabled></textarea>
+      </div>
+      <div class="translator__controls-container">
+        <div class="translator__controls translator__controls_original">
+          <div class="translator__buttons-container">
+            <button class="translator__button translator__button_spech original"><i class="fas fa-volume-up"></i></button>
+            <button class="translator__button translator__button_copy original"><i class="fas fa-copy"></i></button>
+          </div>
+          <select class="translator__countries-select"></select>
+        </div>
+        <button class="translator__exchange-btn">
+          <i class="fas fa-exchange-alt"></i>
+        </button>
+        <div class="translator__controls translator__controls_translated">
+          <select class="translator__countries-select"></select>
+          <div class="translator__buttons-container">
+            <button class="translator__button translator__button_spech translated"><i class="fas fa-volume-up"></i></button>
+            <button class="translator__button translator__button_copy translated"><i class="fas fa-copy"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button type="submit" class="translator__translate-btn">Translate Text</button>
+  </div>
+</body>
+</html>
