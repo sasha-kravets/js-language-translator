@@ -10,6 +10,7 @@
 :root {
   --body-background: linear-gradient(111.4deg, rgba(7, 7, 9, 1) 6.5%, rgba(27, 24, 113, 1) 93.2%);
   --mobile-body-background: #ffffff;
+  --text-color: #ffffff;
   --translator-background: #ffffff;
   --decorative-color-light: #bbbbbb;
   --icons-color: #9f9f9f;
@@ -25,10 +26,12 @@ body {
   background: var(--mobile-body-background);
 }
 
-@media (min-width: 690px) {
-  body {
-    background: var(--body-background);
-  }
+.title {
+  display: none;
+}
+
+.desription {
+  display: none;
 }
 
 .translator {
@@ -49,12 +52,6 @@ body {
   border-bottom: 1px solid var(--decorative-color-light);
 }
 
-@media (min-width: 690px) {
-  .translator__text-input-container {
-    flex-direction: row;
-  }
-}
-
 .translator__text-input {
   height: 170px;
   width: 100%;
@@ -67,22 +64,9 @@ body {
   padding: 10px 15px;
 }
 
-@media (min-width: 590px) {
-  .translator__text-input {
-    height: 250px;
-  }
-}
-
 .translator__text-input_translated {
   border-radius: 0;
   border-top: 1px solid var(--decorative-color-light);
-}
-
-@media (min-width: 690px) {
-  .translator__text-input_translated {
-    border-left: 1px solid var(--decorative-color-light);
-    border-top: unset;
-  }
 }
 
 .translator__controls-container,
@@ -97,12 +81,6 @@ body {
 .translator__controls-container {
   flex-direction: column;
   gap: 10px;
-}
-
-@media (min-width: 590px) {
-  .translator__controls-container {
-    flex-direction: row;
-  }
 }
 
 .translator__controls-container {
@@ -156,4 +134,42 @@ body {
   background: var(--download-button-color);
   font-size: 17px;
   color: var(--button-text-color)
+}
+
+@media (min-width: 690px) {
+  body {
+    background: var(--body-background);
+    flex-direction: column;
+  }
+
+  .title {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+  
+  .desription {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+
+  .translator__text-input-container {
+    flex-direction: row;
+  }
+
+  .translator__text-input_translated {
+    border-left: 1px solid var(--decorative-color-light);
+    border-top: unset;
+  }
+}
+
+@media (min-width: 590px) {
+  .translator__text-input {
+    height: 250px;
+  }
+
+  .translator__controls-container {
+    flex-direction: row;
+  }
 }
